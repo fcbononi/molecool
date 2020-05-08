@@ -1,0 +1,9 @@
+#checkpoint
+git status
+#tell if in git directory or not
+ls -la # see ".git" directory
+#start version control
+git init
+#see master heading
+git log
+
