@@ -8,6 +8,8 @@ git init
 git log
 # accept changes
 git add filename
+# change all files
+git add .
 #commit with message about what the commit is
 git commit -m "message"
 
