@@ -6,5 +6,10 @@ ls -la # see ".git" directory
 git init
 #see master heading
 git log
-
+# accept changes
 git add filename
+#commit with message about what the commit is
+git commit -m "message"
+
+#go back to last version
+git restore
