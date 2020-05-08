@@ -6,12 +6,20 @@ ls -la # see ".git" directory
 git init
 #see master heading
 git log
+#compresses
+git log --oneline
 # accept changes
 git add filename
 # change all files
 git add .
 #commit with message about what the commit is
 git commit -m "message"
-
+#go back one commit
+git diff HEAD~1
 #go back to last version
 git restore
+git checkout -b #creating new branch
+#look at files before changes
+git checkout number_before_update
+#merge branches
+#git merge
