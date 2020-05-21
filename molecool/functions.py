@@ -11,7 +11,6 @@ import matplotlib.pyplot as plt
 
 from mpl_toolkits.mplot3d import Axes3D
 
-#%matplotlib notebook
 
 def calculate_distance(rA, rB):
     # This function calculates the distance between two points given as numpy arrays.
@@ -163,28 +162,6 @@ atom_colors = {
     'S': 'yellow'
 }
 
-
-benzene_file_path = os.path.join('data', 'xyz', 'benzene.xyz')
-benzene_symbols, benzene_coords = open_xyz(benzene_file_path)
-benzene_bonds = build_bond_list(benzene_coords)
-
-# This is a dictionary where the keys are the atom indices, and the value is the length of the bond.
-# For example, (0,1): 1.39 means that there is a bond between atom 0 and atom 1 and its length is 1.39.
-benzene_bonds
-
-avg_sum = 0
-
-for atoms, bl in benzene_bonds.items():
-    avg_sum += bl
-
-avg_bl = avg_sum/len(benzene_bonds)
-
-print('The average bond length is {}'.format(avg_bl))
-
-benzene_fig = draw_molecule(benzene_coords, benzene_symbols, draw_bonds=benzene_bonds)
-
-plt.savefig('benzene.png', dpi=300)
-bond_histogram(benzene_bonds, save_location="benzene_histogram.png")
 
 def canvas(with_attribution=True):
     """
